@@ -1,0 +1,3 @@
+C:/Users/jjram/CLionProjects/CSCI316_Spring23_Assignment1_Gangjun/cmake-build-debug/CMakeFiles/CSCI316_Spring23_Assignment1_Gangjun.dir
+C:/Users/jjram/CLionProjects/CSCI316_Spring23_Assignment1_Gangjun/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/jjram/CLionProjects/CSCI316_Spring23_Assignment1_Gangjun/cmake-build-debug/CMakeFiles/rebuild_cache.dir
