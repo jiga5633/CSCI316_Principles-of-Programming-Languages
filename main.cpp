@@ -12,43 +12,33 @@ string line;
 
 bool isEOF()
 {
-    return sourceCodeFile->eof();
+    return sourceCodeFile->eof() && currentCharIndex == line.size();
 }
 
 void readNextLine()
 {
     getline(*sourceCodeFile, line);
-
+    // line += '\n';
     currentCharIndex = 0;
 }
 
 void getChar()
 {
-
-    if (currentCharIndex == line.length()) {
-
+    if (currentCharIndex == line.size())
+    {
         readNextLine();
-
-
     }
-    //sort(line.begin(), line.end());
+    char currentChar = line[currentCharIndex] ;
 
-    currentChar =line.at(currentCharIndex);
-
-
+    printf("%c\n", currentChar);
+    //currentChar = printf("%c \n",currentChar1);
     currentCharIndex++;
-
-
-
-
 }
+
 
 int main(int argc, char *argv[])
 {
-    if (argc < 2) {
-        cout << "Please provide an input file." << endl;
-        return 1;
-    }
+
     currentChar = '\n';
     currentCharIndex = 0;
     line = "\n";
@@ -58,17 +48,12 @@ int main(int argc, char *argv[])
 
     if (sourceCodeFile->is_open())
     {
-        //for(int i=0; i<= line.length();i++)
+
         while(!isEOF()) {
-            for (int i = 0; i <= line.length(); i++) {
-                getChar();
-                if (currentChar != '\n') {
-                    printf("%c\n", currentChar);
-                }
+            getChar();
+            cout << currentChar ;
 
 
-
-            }
         }
     } else
     {
